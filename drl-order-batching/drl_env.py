@@ -1,3 +1,6 @@
+'''
+Code for defining the simulation environment into a gym environment
+'''
 import gym
 import pandas as pd
 import numpy as np

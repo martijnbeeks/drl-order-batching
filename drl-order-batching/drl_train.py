@@ -1,3 +1,6 @@
+'''
+Code for training a DRL agent on the simulation environment
+'''
 from stable_baselines import PPO2
 from stable_baselines.common.policies import MlpPolicy
 from stable_baselines.common.cmd_util import make_vec_env

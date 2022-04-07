@@ -1,3 +1,6 @@
+'''
+Code for simulation environment and testing heuristics for benchmarking
+'''
 import yaml
 import pandas as pd
 import numpy as np

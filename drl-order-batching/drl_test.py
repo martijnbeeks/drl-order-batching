@@ -1,3 +1,6 @@
+'''
+Code testing a trained DRL agent on the simulation environment
+'''
 from stable_baselines import PPO2
 from drl_env import WAREHOUSE
 import random

@@ -1,3 +1,6 @@
+'''
+Code for the hyper optimization framework Hyperspace that optimizes parameters of a reward function.
+'''
 from hyperspace.hyperdrive import hyperdrive
 from hyper_objective import ObjectiveFunction
 from hyperspace.kepler.data_utils import load_results

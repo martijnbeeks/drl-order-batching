@@ -16,7 +16,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This repository contains code for the presented DRL approach in the paper "Deep reinforcement learning-based solution for a multi-objective online order batching problem" by 
+This repository contains code for the presented DRL approach in the paper "Deep reinforcement learning-based solution for a multi-objective online order batching problem".
 
 
 
@@ -28,7 +28,7 @@ This is an example on how to setup this project locally on python 3.7.10.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/martijnbeeks/drl-order-batching.git
    ```
 2. Install pip packages
    ```sh

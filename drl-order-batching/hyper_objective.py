@@ -1,3 +1,6 @@
+'''
+Code for defining the objective function for the hyper-optimization framework
+'''
 from stable_baselines.common.policies import MlpPolicy
 from stable_baselines import PPO2
 from stable_baselines.common.cmd_util import make_vec_env
