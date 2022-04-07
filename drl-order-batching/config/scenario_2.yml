@@ -1,0 +1,68 @@
+simulation:
+  shifts: 1
+  shift_length: [8]
+  shift_start: [10]
+
+  nPtG_pickers: [20] #[22]
+  nGtP_shuttles: [20] #[22]
+  nStO_operators: [5] #[6]
+  nDtO_operators: [9] #[10]
+
+  virtual_q_ptg: 30
+  virtual_q_gtp: 30
+  virtual_q_dto: 20
+  virtual_q_sto: 20
+
+  PtG_picking_time: 30
+  PtG_picking_constant: 100
+  GtP_picking_time: 15
+  Pack_time: [60, 80]
+  DtO_time: 15
+  StO_time: 40
+  time_step_arrival: 0.1
+
+  PtG_Out_time: 30
+  PtG_Pack_time: 15
+  Pack_Out_time: 15
+  GtP_DtO_time: 15
+  DtO_Out_time: 15
+  GtP_StO_time: 15
+  StO_Pack_time: 15
+  StO_Out_time: 15
+  PtG_GtP_time: 20
+  state_clipping: 25
+
+  max_batchsize_ptg: 10
+  max_batchsize_ptg_items: 10
+  max_batchsize_gtp: 10
+  max_batchsize_ptg_gtp: 5
+
+  actions_pick_by_batch: [1, 3, 5, 7, 8]
+
+environment:
+  observation_space: 20
+  action_space: 11
+  throughput: 6500 #7150
+  t_start: 54000
+  time_window: [14.75, 17]
+  logs:
+    - infeasible_ratio
+    - tardy_orders
+    - picking_time
+    - episode_reward_hist
+  weights: [1, 1] # tardy orders, order picking costs
+
+main:
+    model: PPO2
+    policy: CustomMlpPolicy
+    normalize: false
+    n_workers: 4 # Parallel environments
+    n_steps: 10000000 # Steps to train
+    save_every: 5000000 # Save a checkpoint of the model every n steps
+
+    # Tensorboard logs for environment attributes e.g. self.steps
+    logs:
+        - steps
+        - episode_step
+        - order_batch_ratio
+        - infeasible_ratio
